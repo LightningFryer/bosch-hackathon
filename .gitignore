@@ -1,1 +1,4 @@
-venv
+venv/
+microservices-demo/
+__pycache__/
+*.pyc
