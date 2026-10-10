@@ -34,5 +34,5 @@ This repository contains our solution for the Bosch Hackathon 2027.
 
 5. **Run the Application:**
    ```bash
-   python app.py
+   streamlit run app.py
    ```
