@@ -1,3 +1,9 @@
+import os
+
+ssl_keylog_file = os.environ.get("SSLKEYLOGFILE", "")
+if os.name == "nt" and ssl_keylog_file.startswith("\\\\.\\"):
+    os.environ.pop("SSLKEYLOGFILE", None)
+
 import requests
 import threading
 import time

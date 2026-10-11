@@ -4,11 +4,18 @@ import json
 import os
 import sys
 
-from topology import discover_topology
-from load_harness import LoadHarness
-from chaos_engine import ChaosEngine
-from planner import AIDrivenPlanner
-from scoring import ResilienceAnalyzer
+try:
+    from .topology import discover_topology
+    from .load_harness import LoadHarness
+    from .chaos_engine import ChaosEngine
+    from .planner import AIDrivenPlanner
+    from .scoring import ResilienceAnalyzer
+except ImportError:
+    from topology import discover_topology
+    from load_harness import LoadHarness
+    from chaos_engine import ChaosEngine
+    from planner import AIDrivenPlanner
+    from scoring import ResilienceAnalyzer
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("Milestone1")
